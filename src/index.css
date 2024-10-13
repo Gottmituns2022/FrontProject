@@ -1,13 +1,218 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: verdana, arial, sans-serif;
+}
+
+input.City {
+  max-width: 200px;
+}
+
+img#20{
+  margin-top:20;
+}
+
+div#Osadki{
+  white-space: nowrap;
+}
+
+div.main {
+  display: grid;
+  margin: 30px;
+  border: 1px solid black;
+  grid-template-rows: 80px 150px auto 45px;
+  grid-template-columns: 1fr;
+}
+
+div.HR {
+  background-color: rgb(215, 215, 215);
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-bottom: 1px solid black;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr;
+}
+
+div.HR h1 {
+  font-weight: 500;
+  color: black;
+  margin: 20px;
+}
+
+div.FirstHR {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+div.ChooseScale {
+  font-size: 19px;
+  padding: 5px;
+  text-align: right;
+  margin-right: 30px;
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+div.content {
+  display: grid;
+  grid-template-rows: 275px;
+  grid-template-columns: minmax(155px, 155px) 175px repeat(auto-fill, minmax(160px, 160px));
+}
+
+div.FirstMainUnit {
+  display: grid;
+  grid-template-rows: 40px 100px 67.5px 67.5px;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.MainUnit {
+  display: grid;
+  grid-template-rows: 40px 100px 67.5px 67.5px;
+  grid-template-columns: 1fr;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+div.NowBlock {
+  margin-left: 50px;
+}
+
+div.TodayBlock {
+  grid-column: 3/4;
+}
+
+div.ChooseScale h3 {
+  font-weight: 500;
+}
+
+div.ChooseScale input.FI {
+  margin-left: 20px;
+}
+
+div.ChooseCity {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+div.ChooseCity h3 {
+  font-weight: 500;
+  margin: 50px;
+  font-size: 19px;
+  color: black;
+}
+
+div.ChooseCity input {
+  height: 35px;
+  width: 250px;
+}
+
+div.ChooseCity label {
+  margin-right: 20px;
+}
+
+div.ChooseCity button {
+  height: 35px;
+}
+
+div.day {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  color: gray;
+  font-size: 14px;
+}
+
+div.icon {
+  background-color:white;
+  height: 100px;
+  width: 100px;
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+div.NoMarginTop{
+  margin-top:0px;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+div.phw {
+  color: gray;
+  font-size: 14px;
+}
+
+div.Block {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+div.annotation {
+  grid-row: 4/5;
+  grid-column: 1/2;
+}
+
+div.firstAnnotation {
+  width:105px;
+}
+
+div.tempnow {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+div.tempnow div {
+  font-size: 48px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+div.I-values {
+  margin-left: 30px;
+  grid-row: 3/4;
+  grid-column: 2/3;
+  width:100px;
+}
+
+div.INB {
+  font-weight: 500;
+  color: black;
+  font-size: 18px;
+}
+
+div.ValBlock {
+  margin-top: 15px;
+}
+@media screen and (max-width:900px) {
+  div.main {
+      grid-template-columns: 1fr;
+      grid-template-rows: 140px 150px auto 45px;
+  }
+
+  div.HR {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 70px 70px;
+  }
+
+  div.FirstHR {
+      grid-row: 1/2;
+      grid-column: 1/2;
+  }
+
+  div.ChooseScale {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      text-align: left;
+      margin-left: 20px;
+      padding: 0px;
+  }
 }
