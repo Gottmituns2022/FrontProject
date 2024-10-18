@@ -12,12 +12,13 @@ const HR:FunctionComponent = () =>{
   const handleActionImperial = () => {dispatch(scaleChangeImperial());};
 
   const isFirstRender = useRef(true);
+  let secRen:boolean = true;
   useEffect(()=>{
     if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
+      if(secRen===true){secRen = false; return;}
+      else{isFirstRender.current = false; return;}
     }
-    console.log("Scale)");
+    console.log(`Scale - ${scale}`);
     dispatch(fetchCurrentWeather(currentCity, scale));
   },[scale]);
 

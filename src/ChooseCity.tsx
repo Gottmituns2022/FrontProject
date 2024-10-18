@@ -23,7 +23,7 @@ const ChooseCity:FunctionComponent = () => {
     const interval = setInterval(() => {
       console.log(`Interval - Current city:${currentCity}`);
       dispatch(fetchCurrentWeather(currentCity, scale));
-    }, 60000);
+    }, 600000);
     return () => clearInterval(interval);
   }, [currentCity, scale, dispatch]);
 
