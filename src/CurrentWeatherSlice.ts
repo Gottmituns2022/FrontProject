@@ -129,7 +129,7 @@ export const currentWeatherSlice = createSlice({
             state.pressureN = 1;
         },
         cityChange(state, action:PayloadAction<string>){state.city = action.payload;},
-        updateAxiosCity(state, action:PayloadAction<string>){state.currentCity = action.payload;}
+        updateAxiosCity(state, action:PayloadAction<string>){state.currentCity = action.payload;},
     }
 });
 

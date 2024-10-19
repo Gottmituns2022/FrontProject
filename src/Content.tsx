@@ -42,7 +42,6 @@ let day6 = new Date(today); day6.setDate(today.getDate() + 6);
 
 const Content = ({weather, weatherMinutely}: Props) => {
     let {windSpeedScale, amountPrecipitationScale, pressureScale, pressureN} = useCustomSelector((state) => state.currentWeatherSliceReducer);
-
     return (
             <div className="content">
                 <div className="NowBlock FirstMainUnit">
