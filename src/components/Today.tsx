@@ -1,16 +1,18 @@
 import { useCustomSelector } from "../hooks/hooks";
 import { Weather } from "../types/types";
+import moment from 'moment';
+import 'moment/locale/ru';
 
 interface Props{
     weather:Weather;
 }
 
-const Today = ({weather}:Props) => {
+const Today = ({weather}:Props) => {  
     let {amountPrecipitationScale} = useCustomSelector((state) => state.currentWeatherSliceReducer);
     return(<>
                 <div className="day">
                     <div className="INB">Сегодня</div>
-                    <div>{`${new Date().getDate()} ${new Date().toLocaleDateString('ru-RU', { month: 'short' }).slice(0,3)}`}</div>
+                    <div>{moment().format('D MMM').slice(0,6)}</div>
                 </div>
                 <div className="icon NoMarginTop">
                     <img src={`${weather.data[0].weather.icon}.svg`} alt={weather.data[0].weather.description} />

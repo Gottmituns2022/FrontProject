@@ -1,5 +1,6 @@
 import { useCustomSelector } from "../hooks/hooks";
 import { WeatherMinutely } from "../types/types";
+import moment from 'moment';
 
 interface Props{
     weatherMinutely:WeatherMinutely
@@ -9,14 +10,11 @@ const updateTime = () => {
     let timeElement = document.getElementById("CurrentTime");
     if(timeElement) timeElement.textContent = getCurrentTime();
 }
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1000);  
 
 const getCurrentTime = ():string => {
-    const currentDate = new Date();
-    const hours = currentDate.getHours().toString().padStart(2, '0');
-    const minutes = currentDate.getMinutes().toString().padStart(2, '0');
-    return `${hours}:${minutes}`;
-  }
+    return moment().format('HH:mm');
+}
 
 const CurrentDay = ({weatherMinutely}:Props) => {  
     let {windSpeedScale, pressureScale, pressureN} = useCustomSelector((state) => state.currentWeatherSliceReducer);
