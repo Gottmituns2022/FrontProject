@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Weather } from './store/types';
+import { Weather } from '../types/types';
 
 const API_key = '50bba416fc084de8bd101571b9063ba1';
 const BASE_URL = 'https://api.weatherbit.io/v2.0/forecast';

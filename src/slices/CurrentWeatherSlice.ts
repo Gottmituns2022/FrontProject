@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Weather, WeatherMinutely } from "./store/types";
+import { Weather, WeatherMinutely } from "../types/types";
 
 type CurrentWeather = {
     weather:Weather;

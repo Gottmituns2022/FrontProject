@@ -1,22 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import HR from './HR';
-import ChooseCity from './ChooseCity';
-import Content from './Content';
+import './CSS/index.css';
+import Header from './components/Header';
+import ChooseCity from './components/ChooseCity';
 import {store} from './store/store';
 import { Provider } from 'react-redux';
-import App from './app';
+import Content from './components/Content';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
         <div className="main">
-            <HR/>
+            <Header/>
             <ChooseCity/>
-            <App/>
+            <Content/>
         </div>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>  
 );

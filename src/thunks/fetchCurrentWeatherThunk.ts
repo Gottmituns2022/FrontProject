@@ -1,7 +1,7 @@
-import { CurrentWeatherService } from "../CurrentWeatherService";
-import { currentWeatherSlice } from "../CurrentWeatherSlice";
-import { WeatherService } from "../WeatherService";
-import { AppDispatch } from "./store"
+import { CurrentWeatherService } from "../services/CurrentWeatherService";
+import { currentWeatherSlice } from "../slices/CurrentWeatherSlice";
+import { WeatherService } from "../services/WeatherService";
+import { AppDispatch } from "../store/store"
 
 export const fetchCurrentWeather = (payload:string, scale:string) => async (dispatch:AppDispatch) => {
     try {

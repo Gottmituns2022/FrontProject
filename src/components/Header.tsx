@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useEffect, useRef } from 'react';
-import { useCustomDispatch, useCustomSelector } from './hooks';
-import { fetchCurrentWeather } from './store/fetchCurrentWeatherThunk';
-import { currentWeatherSlice } from './CurrentWeatherSlice';
+import { useCustomDispatch, useCustomSelector } from '../hooks/hooks';
+import { fetchCurrentWeather } from '../thunks/fetchCurrentWeatherThunk';
+import { currentWeatherSlice } from '../slices/CurrentWeatherSlice';
 
-const HR:FunctionComponent = () =>{
+const Header:FunctionComponent = () =>{
   let {scale, currentCity} = useCustomSelector((state) => state.currentWeatherSliceReducer);
   const { scaleChangeMetric, scaleChangeImperial } = currentWeatherSlice.actions;
 
@@ -11,7 +11,7 @@ const HR:FunctionComponent = () =>{
   const handleActionMetric = () => {dispatch(scaleChangeMetric());};
   const handleActionImperial = () => {dispatch(scaleChangeImperial());};
 
-  const firRen = useRef(2);
+  const firRen = useRef(2);  
   useEffect(()=>{
     if (firRen.current > 0){firRen.current = firRen.current - 1; return;}
     console.log(`Scale - ${scale}`);
@@ -35,4 +35,4 @@ const HR:FunctionComponent = () =>{
   );
 }
 
-export default HR;
+export default Header;

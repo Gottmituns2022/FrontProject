@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useRef } from 'react';
-import { fetchCurrentWeather } from './store/fetchCurrentWeatherThunk';
-import { useCustomDispatch, useCustomSelector } from './hooks';
-import { currentWeatherSlice } from './CurrentWeatherSlice';
+import { fetchCurrentWeather } from '../thunks/fetchCurrentWeatherThunk';
+import { useCustomDispatch, useCustomSelector } from '../hooks/hooks';
+import { currentWeatherSlice } from '../slices/CurrentWeatherSlice';
 
 const ChooseCity:FunctionComponent = () => {
   let {scale, city, currentCity} = useCustomSelector((state) => state.currentWeatherSliceReducer);
