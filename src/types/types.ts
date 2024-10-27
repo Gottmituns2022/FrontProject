@@ -9,6 +9,15 @@ export type Weather = {
   }[];
 }
 
+export type WeatherBlock = {
+    temp:number;
+    precip:number;
+    weather: {
+      description: string;
+      icon: string;
+    };
+}
+
 export type WeatherMinutely = {
   data: {
     wind_spd:number;
